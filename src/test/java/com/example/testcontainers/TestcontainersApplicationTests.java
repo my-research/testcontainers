@@ -6,10 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 
-// @SpringBootTest(classes = TestBeanSetting.class)
-// @Import(TestBeanSetting.class)
-// @SpringJUnitConfig(TestBeanSetting.class)
-@ContextConfiguration(classes = TestBeanSetting.class)
+@SpringBootTest(classes = TestBeanSetting.class)
 class TestcontainersApplicationTests {
 
     @Autowired
@@ -20,5 +17,4 @@ class TestcontainersApplicationTests {
         Car car = ctx.getBean("car", Car.class);
         System.out.println("car = " + car);
     }
-
 }
